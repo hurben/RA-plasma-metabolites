@@ -1,0 +1,16 @@
+clp_fac_matrix	/Users/m221138/RA_project/data/clp_fac_parsed_matrix.r1.rm.nan.tsv
+clp_sc_matrix	/Users/m221138/RA_project/data/clp_sc_parsed_matrix.r1.rm.nan.tsv
+clp_lc_matrix	/Users/m221138/RA_project/data/clp_lc_parsed_matrix.r1.rm.nan.tsv
+hd4_matrix	/Users/m221138/RA_project/data/plasma_hd4_scaled_parsed_matrix.r1.rm.nan.tsv
+
+//Test data
+clp_fac_qc_nan_matrix	/Users/m221138/RA_project/data/filled_qc_data_nan/MLR.clp.fac.nan.ready.ignor.norm.qc.fillna.tsv
+clp_lc_qc_nan_matrix	/Users/m221138/RA_project/data/filled_qc_data_nan/MLR.clp.lc.nan.ready.ignor.norm.qc.fillna.tsv
+clp_sc_qc_nan_matrix	/Users/m221138/RA_project/data/filled_qc_data_nan/MLR.clp.sc.nan.ready.ignor.norm.qc.fillna.tsv
+hd4_qc_nan_matrix	/Users/m221138/RA_project/data/filled_qc_data_nan/MLR.hd4.nan.ready.ignor.norm.qc.fillna.tsv
+
+//training data
+clp_fac_qc_matrix	/Users/m221138/RA_project/data/filled_qc_data/MLR.clp.fac.ready.ignor.norm.qc.fillna.tsv
+clp_sc_qc_matrix	/Users/m221138/RA_project/data/filled_qc_data/MLR.clp.sc.ready.ignor.norm.qc.fillna.tsv
+clp_lc_qc_matrix	/Users/m221138/RA_project/data/filled_qc_data/MLR.clp.lc.ready.ignor.norm.qc.fillna.tsv
+hd4_qc_matrix	/Users/m221138/RA_project/data/filled_qc_data/MLR.hd4.ready.ignor.norm.qc.fillna.tsv

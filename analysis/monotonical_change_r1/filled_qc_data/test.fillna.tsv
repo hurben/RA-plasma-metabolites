@@ -1,0 +1,6 @@
+	col1	col2	col3	col4
+f1	1	2	3	4
+f2	nan	1	2	3
+f3	2	3	4	5
+f4	1	2	3	4
+f5	2.0	nan	4.0	nan

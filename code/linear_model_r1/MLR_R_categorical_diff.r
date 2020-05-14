@@ -57,7 +57,9 @@ while (counter < NUM_CATEGORY){
 		if (file.exists(output_txt)){
 			file.remove(output_txt)
 		}
-		cat('chemID\tpvalue\n', file=output_txt, append=TRUE)
+
+		output_string <- paste("chemID\tpval\t",file_name_1,"\t", file_name_2,"\n", sep="")
+		cat(output_string, file=output_txt, append=TRUE)
 	   
 		data_df_1 <- read.csv(file_name_1, sep="\t", header=TRUE, row.names=1)
 		data_df_1 <- as.data.frame(t(data_df_1))
@@ -90,6 +92,7 @@ while (counter < NUM_CATEGORY){
 					temp_df_1 <- data_df_1[,1:4]
 					label_1 <- rep(1:1, each=NUM_PATIENTS_1)
 					chem_value_list_1 <- data_df_1[,i]
+					mean_chem_1 <- mean(chem_value_list_1)
 
 					temp_df_1$label <- label_1 
 					temp_df_1$chem_abundance <- chem_value_list_1
@@ -97,6 +100,7 @@ while (counter < NUM_CATEGORY){
 					temp_df_2 <- data_df_2[,1:4]
 					label_2 <- rep(0:0, each=NUM_PATIENTS_2)
 					chem_value_list_2 <- data_df_2[,i]
+					mean_chem_2 <- mean(chem_value_list_2)
 
 					temp_df_2$label <- label_2
 					temp_df_2$chem_abundance <- chem_value_list_2
@@ -107,7 +111,7 @@ while (counter < NUM_CATEGORY){
 
 					pval <- tryCatch(run_glmer(main_df), error = function(e){ return ("error")})
 
-					output_string <- paste(chem_column_ID,"\t",pval,"\n", sep="")
+					output_string <- paste(chem_column_ID,"\t",pval,"\t",mean_chem_1,"\t", mean_chem_2,"\n", sep="")
 					cat(output_string, file=output_txt,append=TRUE)
 				}
 			}
