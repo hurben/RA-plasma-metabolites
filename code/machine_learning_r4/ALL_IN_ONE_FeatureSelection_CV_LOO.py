@@ -98,19 +98,18 @@ if __name__ == '__main__':
 	#Model will use 126 samples to create a model
 	#Model will predict DAS28 score using 2 samples
 	#Repeating this 64 times
-	skip_preprocess = 1
-	skip_2nd_preprocess = 1
-	skip_model_performance = 1
+	skip_preprocess = 0
+	skip_2nd_preprocess = 0
+	skip_model_performance = 0
 
 	#Testing the performance of "Feature selection" with full dataset (sample size 140 = patients 76)
 	#Model will use 128 samples to create a model
 	#Model will predict DAS28 score using 12 samples
-	skip_full_model_preprocess = 1
-	skip_full_model_2nd_preprocess = 1
+	skip_full_model_preprocess = 0
+	skip_full_model_2nd_preprocess = 0
 	skip_final_model_performance = 0
 	
 	if skip_preprocess == 0:
-
 		for file_name in file_list:
 			print  ("Preprocess to feature selection step #1  > %s" % file_name)
 			preprocess(file_name, 1, 1)
@@ -131,17 +130,14 @@ if __name__ == '__main__':
 
 	#MANUAL INFORMATION REQUIRED
 	ml_ready_folders = ['hd4_fs', 'hd4_nofs', 'clp_sc_fs','clp_sc_nofs']
-
 	from sklearn.linear_model import LinearRegression
 
 	if skip_model_performance == 0:
-
 		loo_cv_dict = {}
-
+		
 		for folder in ml_ready_folders:
-			ml_result_folder = '%s/ml_results' % folder
-
 			loo_cv_mae_list = []
+			ml_result_folder = '%s/ml_results' % folder
 
 			if os.path.isdir(ml_result_folder) == True:
 				os.system('rm -r %s' % ml_result_folder)
@@ -202,10 +198,9 @@ if __name__ == '__main__':
 		final_model_dict = {}
 
 		for folder in ml_ready_folders:
+			loo_cv_mae_list = []
 			print ("Final Model Validation > %s" % folder)
 			#ml_result_folder = '%s/ml_results' % folder
-
-			loo_cv_mae_list = []
 
 			ml_ready_file = '%s/full.ml.ready.txt' % (folder)
 			ml_ready_test_file = '%s/full.ml.ready.test.txt' % (folder)
@@ -221,7 +216,6 @@ if __name__ == '__main__':
 			lr = LinearRegression()
 			data_point_for_plot_dict, MAE, AE_list = MLFL_CV.cross_validation().validation_model_learning_and_prediction(lr, X_train, y_train, X_test, y_test)
 			stdev_MAE = statistics.stdev(AE_list)
-			#AE_list
 			
 			final_model_dict[folder] = AE_list
 			print (data_point_for_plot_dict)
