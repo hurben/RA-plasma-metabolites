@@ -1,11 +1,13 @@
-RA Project     19.12.04
+TILE OF THE MANUSCRIPT
 =========================
+
+DOI : TBD
+
+AUTHORS LISTS HERE
 
 Contact: hur.benjamin@mayo.edu
 Corresponding Author : sung.jaeyun@mayo.edu
 
-Related to the manuscript : TBD
-DOI : TBD
 
 ##### 1. Differential Abundant metabolite/lipid
 
@@ -26,3 +28,10 @@ DOI : TBD
 >analysis/selection_scheme/run.sh
 
 #### DATA
+
+preprocessed data: Training datset (n=128)
+>data/filled_qc_data
+
+preprocessed data: Test dataset (n=12)
+>data/filled_qc_data_nan/
+
