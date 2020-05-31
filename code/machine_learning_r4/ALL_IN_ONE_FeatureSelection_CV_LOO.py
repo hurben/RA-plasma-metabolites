@@ -72,9 +72,9 @@ def preprocess_full_dataset (file_name, do_lmer, do_feature_selection):
 if __name__ == '__main__':
 
 	import sys
-	sys.path.insert(1, '/Users/m221138/RA_project/code/machine_learning_r3/')
-	sys.path.insert(1,'/Users/m221138/RA_project/code')
-	sys.path.insert(1, '/Users/m221138/RA_project/code/feature_selection')
+	sys.path.insert(1,'../../code')
+	sys.path.insert(1, '../../code/machine_learning_r4/')
+#	sys.path.insert(1, '../code/feature_selection')
 	import os
 	import FL
 	import MLFL_CV
@@ -220,13 +220,16 @@ if __name__ == '__main__':
 
 			lr = LinearRegression()
 			data_point_for_plot_dict, MAE, AE_list = MLFL_CV.cross_validation().validation_model_learning_and_prediction(lr, X_train, y_train, X_test, y_test)
+			stdev_MAE = statistics.stdev(AE_list)
+			#AE_list
 			
 			final_model_dict[folder] = AE_list
 			print (data_point_for_plot_dict)
 			print ('----------------------------')
 			print ('%s' % folder)
 			print ('MAE: %s' % MAE)
-			print (AE_list)
+			print ("stdev MAE: %s" % stdev_MAE)
+			#print (AE_list)
 			print ('----------------------------')
 
 			MLFL_plots.plots().draw_pre_observ_scatter_plot(data_point_for_plot_dict, folder)

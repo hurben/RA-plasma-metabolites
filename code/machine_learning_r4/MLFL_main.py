@@ -1,7 +1,7 @@
 class access_data:
 
 	#if you have your own data.locations file, modify this directory
-	data_profile = '/Users/m221138/RA_project/code/machine_learning_r3/file_locations.txt'
+	data_profile = '../../code/machine_learning_r4/file_locations.txt'
 	data_profile_readlines = open(data_profile,'r').readlines()
 
 	def search_module(self, data_type):
@@ -135,7 +135,7 @@ class feature_selection:
 			out_dir = ('./%s' % file_name)
 
 		print (file_name)
-		os.system('Rscript /Users/m221138/RA_project/code/machine_learning_r3/MLR_R_lmer.r %s %s' % (data_profile, out_dir))
+		os.system('Rscript ../../code/machine_learning_r4/MLR_R_lmer.r %s %s' % (data_profile, out_dir))
 
 	#Feature selection
 	#After running the linear model, extract/summarize features from each iterations
@@ -290,6 +290,6 @@ else:
 	import os
 	import sys
 	import LINEAR_MODEL_FL as LMFL
-	sys.path.insert(1, '/Users/m221138/RA_project/code')
+	sys.path.insert(1, '../../code')
 
 	print ("Loading MLFL_main")

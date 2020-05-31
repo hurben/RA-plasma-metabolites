@@ -1,7 +1,7 @@
 def do_lmer_full_dataset(file_name, data_profile):
 
 		out_dir = './%s' % file_name
-		os.system('Rscript /Users/m221138/RA_project/code/machine_learning_r2/MLR_R_lmer_fulldataset.r %s %s' % (data_profile, out_dir))
+		os.system('Rscript ../../code/machine_learning_r4/MLR_R_lmer_fulldataset.r %s %s' % (data_profile, out_dir))
 
 def full_data_full_feature_selection(folder_list, summary_folder, test_folder_list):
 #NO Feature selection...
@@ -266,6 +266,6 @@ if __name__ == "__main__":
 else:
 	import os
 	import sys
-	sys.path.insert(1,'/Users/m221138/RA_project/code')
+	sys.path.insert(1,'../../code')
 	import MLFL_main
 	import LINEAR_MODEL_FL as LMFL
