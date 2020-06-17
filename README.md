@@ -3,7 +3,7 @@ TILE OF THE MANUSCRIPT
 
 DOI : TBD
 
-AUTHORS LISTS HERE
+Benjamin Hur, Vinod Kumar Gupta, John M. Davis, and Jaeyun Sung
 
 Contact: hur.benjamin@mayo.edu
 Corresponding Author : sung.jaeyun@mayo.edu
