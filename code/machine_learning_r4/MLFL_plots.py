@@ -87,7 +87,6 @@ class plots:
 			summary_sns_plot = sns.lineplot(set_index_list, loo_mae_list, label=folder, color=color_list[i])
 			#summary_sns_plot = sns.lineplot(set_index_list, loo_mae_list, label=folder, color=color_list[i])
 
-		summary_sns_plot.set(xlabel=label_x, ylabel=label_y)
 		summary_sns_plot.set_ylim(0,5)
 		summary_sns_plot.get_figure()
 		summary_sns_plot.figure.savefig(summary_file)
@@ -105,9 +104,11 @@ class plots:
 		corr, pvalue = spearmanr(data_point_dict["predict"], data_point_dict["observe"])
 
 		preobs_plot = sns.lineplot(theoretical_X, theoretical_y, label="Therotical Perfect Model")
-		preobs_plot = sns.regplot(data_point_dict["predict"], data_point_dict["observe"], truncate=False, label="DAS28-crp correlated features")
+		preobs_plot = sns.regplot(data_point_dict["predict"], data_point_dict["observe"], truncate=False, label="DAS28-crp Observation/Prediction")
 
-		preobs_plot.set(xlabel="prediction", ylabel="observation")
+		preobs_plot.set(xlabel='DAS28 (Prediction)', ylabel='DAS28 (Observation)')
+		preobs_plot.set_xlim(0,7)
+		preobs_plot.set_ylim(0,7)
 		preobs_plot.legend()
 		preobs_plot.set_title('%s\ncorr: %s pval: %s' % (folder_name, round(corr,3), round(pvalue, 3)))
 		preobs_plot.get_figure()

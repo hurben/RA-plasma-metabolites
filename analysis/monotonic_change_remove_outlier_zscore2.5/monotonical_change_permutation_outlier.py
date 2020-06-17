@@ -37,7 +37,7 @@ def define_label(label_num, value):
 
 def monotonic_change(file_i_df, file_i, output_dir, label_list, data_location_dir):
 
-	FC_list = [0.1, 0.2]
+	FC_list = [0.1]
 
 	output_token = file_i.split('.')
 
@@ -121,14 +121,13 @@ def create_up_down_df(monotonic_dict, data_dict, chemID_list, label_list, output
 
 def calculate_pvalue(file_i_df, monotonic_dict, monotonic_change_chemID_list, FC, label_list):
 
-#	print ('100000257', monotonic_dict['100000257'])
 	das28_label_list = list(file_i_df.iloc[0,1:])
 	random_status_summary_dict = {}
 	pvalue_dict = {}
 
 	random_sampling = 10000
 	for i in range(random_sampling):
-#		print ("simulation step: %s" % i)
+		print ('iteration: %s' % i)
 		
 		random_das28_label_list = list(das28_label_list)
 		random.shuffle(random_das28_label_list)
@@ -143,10 +142,6 @@ def calculate_pvalue(file_i_df, monotonic_dict, monotonic_change_chemID_list, FC
 			try: random_status_summary_dict[chemID].append(random_monotonic_status)
 			except KeyError: random_status_summary_dict[chemID] = [random_monotonic_status]
 
-#			if chemID == '100000257':
-#				if random_monotonic_status != 'dynamic':
-#					print ('100000257',random_monotonic_status)
-	
 	for chemID in monotonic_change_chemID_list:
 		real_status = monotonic_dict[chemID]
 		random_status_list = random_status_summary_dict[chemID]
@@ -226,6 +221,7 @@ def file_df_to_data_dict(file_i_df):
 		if i != 0:
 			chemID = file_i_df.iloc[i,0]
 			chemID_list.append(chemID)
+			unique_label_list = ['r','l','m','h']
 
 			for j in range(1, c):
 				
@@ -234,6 +230,22 @@ def file_df_to_data_dict(file_i_df):
 
 				try: data_dict[das28_label, chemID].append(chem_value)
 				except KeyError: data_dict[das28_label, chemID] = [chem_value]
+
+			#module for outlier removal
+			for label in unique_label_list:
+				filtered_list = []
+				chem_value_list = data_dict[label, chemID]
+				zscore_chem_value_list = stats.zscore(chem_value_list)
+						
+				for i in range(len(zscore_chem_value_list)):
+					zscore_chem = zscore_chem_value_list[i]
+
+					if zscore_chem < 2.5 and zscore_chem > -2.5:
+						filtered_list.append(chem_value_list[i])
+					else:
+						#print ("%s, %s removed having %s, zscore : %s" % (label, chemID, chem_value, zscore_chem))
+						None
+				data_dict[label, chemID] = filtered_list
 
 	label_list = list(label_count_dict.keys())
 	num_labels = len(label_list)
@@ -295,6 +307,7 @@ import pandas as pd
 import statistics
 import math
 import random
+from scipy import stats
 
 label_num = sys.argv[1]
 label_num = int(label_num)
@@ -302,8 +315,6 @@ output_dir = sys.argv[2]
 
 
 rlmh_data_location_dir = './filled_qc_data/'
-
-#file_list = ['MLR.clp.fac.ready.ignor.norm.qc.fillna.tsv','MLR.clp.lc.ready.ignor.norm.qc.fillna.tsv','MLR.clp.sc.ready.ignor.norm.qc.fillna.tsv','MLR.hd4.ready.ignor.norm.qc.fillna.tsv']
 file_list = ['MLR.clp.sc.ready.ignor.norm.qc.fillna.tsv', 'MLR.hd4.ready.ignor.norm.qc.fillna.tsv']
 
 main(rlmh_data_location_dir, file_list, label_num, output_dir)
