@@ -17,9 +17,9 @@ Corresponding Author : sung.jaeyun@mayo.edu
 
 ##### 2. Monotonic Altering metabolite/lipid
 
->code/monotonic_change/monotonical_change_permutation_r1.py
+>code/monotonic_change/monotonical_change_permutation_outlier.py
 
->analysis/monotonic_change_r3/run.sh
+>analysis/monotonic_change_remove_outlier_zscore2.5/run.sh
 
 ##### 3. metabolite/lipid selection for quantitative disease activity of RA
 
