@@ -34,7 +34,14 @@ df$genes <- row.names(df)
 #pvalue 0.05 = 1.30103 (-10logpvalue)
 sig_subset <- subset(df, pvalue > 1.30103)
 sig_red_subset <- subset(sig_subset, log2FC > 0.2)
+
+print ("up")
+print (sig_red_subset[1])
+print (nrow(sig_red_subset))
 sig_blue_subset <- subset(sig_subset, log2FC < -0.2)
+print ("down")
+print (sig_blue_subset[1])
+print (nrow(sig_blue_subset))
 
 #Plot for labels
 output_pdf_label <- paste(output_prefix, ".label.pdf", sep="")
