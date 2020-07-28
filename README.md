@@ -23,9 +23,9 @@ Corresponding Author : sung.jaeyun@mayo.edu
 
 ##### 3. metabolite/lipid selection for quantitative disease activity of RA
 
->code/machine_learning_r4/All_IN_ONE_FeatureSelection_CV_LOO.py
+>code/machine_learning_r7/All_IN_ONE_FeatureSelection_CV_LOO.py
 
->analysis/selection_scheme/run.sh
+>analysis/selection_scheme_r7/run.sh
 
 #### DATA
 
