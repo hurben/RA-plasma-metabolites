@@ -18,7 +18,7 @@ args <- commandArgs(trailingOnly = TRUE)
 output_dir <- args[1]
 file_prefix <- args[2]
 
-data_dir <- "/Users/m221138/RA_project/data/filled_qc_data/2class_v3/"
+data_dir <- "../../../data/filled_qc_data/"
 data_category_list <- c("rl.tsv", "mh.tsv")
 
 #I HATE NON-ZEROBASED LIST INDEX
