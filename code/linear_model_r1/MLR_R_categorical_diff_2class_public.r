@@ -18,8 +18,8 @@ args <- commandArgs(trailingOnly = TRUE)
 output_dir <- args[1]
 file_prefix <- args[2]
 
-data_dir <- "/Users/m221138/RA_project/data/filled_qc_data/"
-data_category_list <- c("h.tsv", "l.tsv", "m.tsv", "r.tsv")
+data_dir <- "../../../data/filled_qc_data/"
+data_category_list <- c("rl.tsv", "mh.tsv")
 
 #I HATE NON-ZEROBASED LIST INDEX
 NUM_CATEGORY <- length(data_category_list) + 1
@@ -34,7 +34,7 @@ while (counter < NUM_CATEGORY){
 	category_1 <- data_category_list[counter]
 	category_1 <- strsplit(category_1,".tsv")
 
-	file_name_1 <- paste(data_dir, file_prefix, category_1, ".tsv", sep="")
+	file_name_1 <- paste(data_dir, file_prefix, category_1, ".public.tsv", sep="")
 
 	log_message <- paste("STEP #", counter, sep="")
 	print (log_message)
@@ -48,11 +48,11 @@ while (counter < NUM_CATEGORY){
 		category_2 <- data_category_list[counter_2nd]
 		category_2 <- strsplit(category_2, ".tsv")
 
-		file_name_2 <- paste(data_dir, file_prefix, category_2, ".tsv", sep="")
+		file_name_2 <- paste(data_dir, file_prefix, category_2, ".public.tsv", sep="")
 		log_message <- paste("=== ", file_name_2, sep="")
 		print (log_message)
 
-		output_txt = paste(output_dir, '/', file_prefix, category_1, '.', category_2, '.tsv', sep="")
+		output_txt = paste(output_dir, '/', file_prefix, category_1, '.', category_2, '.public.tsv', sep="")
 		print (output_txt)
 		if (file.exists(output_txt)){
 			file.remove(output_txt)
