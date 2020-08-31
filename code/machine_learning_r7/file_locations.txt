@@ -1,7 +1,0 @@
-hd4_matrix	../../data/plasma_hd4_scaled_parsed_matrix.r1.rm.nan.tsv
-
-//Test data
-hd4_qc_nan_matrix	../../data/filled_qc_data_nan/MLR.hd4.nan.ready.ignor.norm.qc.fillna.tsv
-
-//training data
-hd4_qc_matrix	../../data/filled_qc_data/MLR.hd4.ready.ignor.norm.qc.fillna.tsv
