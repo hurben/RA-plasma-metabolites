@@ -1,4 +1,4 @@
-Plasma Metabolomic Profiling in Patients with Rheumatoid Arthritis Identifies Biochemical Features Indicative of Disease Activity
+Plasma Metabolomic Profiling in Patients with Rheumatoid Arthritis Identifies Biochemical Features Indicative of Quantitative Disease Activity
 =========================
 
 DOI : TBD
@@ -13,13 +13,13 @@ Corresponding Author : sung.jaeyun@mayo.edu
 
 >code/linear_model_r1/MLR_R_categorical_diff_2class_v2.r
 
->analysis/differential_abundance_v2/2class_v2/run.sh
+>analysis/differential_abundance_public/2class/run.sh
 
 ##### 2. Feature selection for quantitative disease activity of RA
 
->code/machine_learning_r7/All_IN_ONE_FeatureSelection_CV_LOO.py
+>code/machine_learning_public/All_IN_ONE_FeatureSelection_CV_LOO.py
 
->analysis/selection_scheme_r7/run.sh
+>analysis/selection_scheme_public/run.sh
 
 ##### 3. Other statistics
 
