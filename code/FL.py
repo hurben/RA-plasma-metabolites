@@ -84,6 +84,7 @@ def data_profile_manage(data_file):
 	return data_profile_dict, chemID_list, participantID_list
 
 
+#currently not in use
 def data_profile_manage_ver_simple(data_file):
 
 	open_data_profile = open(data_file,'r')
@@ -120,6 +121,7 @@ def data_profile_manage_ver_simple(data_file):
 
 
 
+#currently not in use
 def define_das_label_by_fc(das_t1, das_t2, cutoff):
 
 	import math
@@ -133,6 +135,7 @@ def define_das_label_by_fc(das_t1, das_t2, cutoff):
 	
 	return das_label
 
+#currently not in use
 def define_das_label_by_diff(das_diff):
 	#das_diff = das_t1 - das_t2
 
@@ -145,6 +148,7 @@ def define_das_label_by_diff(das_diff):
 
 	return label
 
+#currently not in use
 def define_das_label_by_absolute(das_diff):
 
 	#das_diff = das_t2 - das_t1
