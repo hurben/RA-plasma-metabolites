@@ -26,7 +26,8 @@ Corresponding Author : sung.jaeyun@mayo.edu
 Investigation of drugs (csDMARD, TNFi-bDMARD, non-TNFi-bDMARD, MTX, PRED) that affected the abundance of metabolites.
 >code/statistics/drug_effect_lmer_R.ipynb
 
-Differentially abundant metabolites specific test; confounding effect (drug, smoke, age, etc) difference between higher and lower disease activity.
+Differentially abundant metabolites related test. 
+Investigates whether confounding effects (drug, smoke, age, etc) differs between higher and lower disease activity.
 >code/statistics/ftest_comfounds.ipynb
 
 Investigation of prescription (csDMARD, TNFi-bDMARD, non-TNFi-bDMARD, MTX, PRED) differences between visit 1 and visit 2.
