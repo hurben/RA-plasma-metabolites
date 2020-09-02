@@ -1,0 +1,52 @@
+chem_name	rho	pvalue
+linolenoylcarnitine (C18:3)*	-0.353880952	4.17E-05
+"bilirubin (E,E)*"	-0.341818078	7.85E-05
+phenol sulfate	-0.288074051	0.00097583
+N-acetyltryptophan	-0.287276156	0.001009502
+linoleoylcarnitine (C18:2)*	-0.279729434	0.001384704
+biliverdin	-0.276454262	0.001583985
+6-bromotryptophan	-0.271830382	0.001909849
+N-acetylarginine	-0.260463506	0.002984503
+tryptophan	-0.249524306	0.004505344
+branched chain 14:0 dicarboxylic acid	-0.245413962	0.005236111
+guanidinoacetate	-0.243881084	0.005534624
+trigonelline (N'-methylnicotinate)	-0.239943918	0.00637202
+eicosenoylcarnitine (C20:1)*	-0.228164223	0.009588614
+N-acetyltyrosine	-0.224384103	0.010888149
+"N2-acetyl,N6-methyllysine"	-0.220439253	0.0124068
+3-phenylpropionate (hydrocinnamate)	-0.220400461	0.012422611
+dihomo-linoleoylcarnitine (C20:2)*	-0.218038024	0.013419319
+serine	-0.213831889	0.015367479
+lysine	-0.211750888	0.016419182
+bilirubin	-0.176909464	0.045754254
+lanthionine	-0.176415213	0.046372928
+1-linoleoyl-GPA (18:2)*	-0.166199501	0.060799732
+glycoursodeoxycholate	-0.093089931	0.295961897
+isoursodeoxycholate	-0.06622221	0.457672489
+4-guanidinobutanoate	-0.056791325	0.524299627
+alpha-ketobutyrate	-0.015651378	0.860805576
+ectoine	0.005745515	0.948678848
+gulonate*	0.006718476	0.940003011
+myo-inositol	0.013757209	0.877510788
+1-carboxyethylleucine	0.03738882	0.675213813
+1-carboxyethylisoleucine	0.038041363	0.669873776
+pyrraline	0.039609258	0.657110662
+erucate (22:1n9)	0.042470518	0.634074139
+N-acetylneuraminate	0.045626615	0.609064824
+1-methylhistidine	0.046527798	0.602004136
+3-methylhistidine	0.074122293	0.405682083
+beta-hydroxyisovalerate	0.082500333	0.354545837
+1-carboxyethylvaline	0.112372314	0.20663228
+glucose	0.113348184	0.202692407
+stearoyl ethanolamide	0.115556955	0.193975287
+(14 or 15)-methylpalmitate (a17:0 or i17:0)	0.125805104	0.157071949
+gluconate	0.134564844	0.129927133
+"1,6-anhydroglucose"	0.135837092	0.126303928
+palmitoyl ethanolamide	0.135895356	0.12613988
+trimethylamine N-oxide	0.138364672	0.119336902
+hypoxanthine	0.140341842	0.114097442
+cysteinylglycine disulfide*	0.195585275	0.026932007
+dimethylguanidino valeric acid (DMGV)*	0.210560805	0.017048273
+glucuronate	0.225414498	0.010519418
+mannose	0.249795416	0.00446052
+3-hydroxystearate	0.250618119	0.004326932
