@@ -1,2 +1,1 @@
-cat MLR.hd4.ready.ignor.norm.qc.fillna.rl.mh.public.tsv | grep -v 'error' > rm_error/MLR.hd4.ready.ignor.norm.qc.fillna.rl.mh.public.tsv.rm_error
-
+cat DAM.results.public.tsv | grep -v 'error' > DAM.results.public.tsv.rm_error

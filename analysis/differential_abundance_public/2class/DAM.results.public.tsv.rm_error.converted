@@ -1,4 +1,4 @@
-chemID	pval	../../../data/filled_qc_data/MLR.hd4.ready.ignor.norm.qc.fillna.rl.public.tsv	../../../data/filled_qc_data/MLR.hd4.ready.ignor.norm.qc.fillna.mh.public.tsv
+chemID	pval	../../../data/discovery_cohort/MLR.hd4.lower.group.public.tsv	../../../data/discovery_cohort/MLR.hd4.higher.group.public.tsv
 3-decenoylcarnitine	0.0562426205860356	1.19829210526316	0.986807692307692
 3-hydroxymyristate	0.778944366554271	1.13309473684211	1.12177115384615
 malate	0.765448229947285	1.06074868421053	1.07918269230769
