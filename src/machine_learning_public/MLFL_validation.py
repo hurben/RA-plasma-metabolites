@@ -63,14 +63,6 @@ def full_data_full_feature_selection(folder_list, summary_folder, test_folder_li
 				test_chemID_list.append(token[0])
 
 		test_file.close()
-		
-	if len(test_chemID_list) != len(train_chemID_list):
-		print ("------------- %s --------------" % summary_folder)
-		print ("Note that the number of chemID of Training set and Test set are different")
-		print ("This is not a problem due to our preprocess scheme. But be noted.")
-		print ("Training Set : %s" % len(train_chemID_list))
-		print ("Test Set : %s" % len(test_chemID_list))
-		print ('-------------------------------')
 	
 	common_chemID_list = list(set(train_chemID_list) & set(test_chemID_list))
 
