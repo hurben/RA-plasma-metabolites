@@ -3,7 +3,7 @@ Plasma Metabolomic Profiling in Patients with Rheumatoid Arthritis Identifies Bi
 
 DOI : TBD
 
-Benjamin Hur, Kerry A. Wright, Vinod K. Gupta, Harvey Huang, Kenneth J. Warrington, Veena Taneja, John M. Davis III, and Jaeyun Sung
+Benjamin Hur, Vinod K. Gupta, Harvey Huang, Kerry A. Wright, Kenneth J. Warrington, Veena Taneja, John M. Davis III, and Jaeyun Sung
 
 Contact: hur.benjamin@mayo.edu
 Corresponding Author : sung.jaeyun@mayo.edu
