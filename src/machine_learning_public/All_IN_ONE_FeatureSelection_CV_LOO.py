@@ -80,7 +80,7 @@ if __name__ == '__main__':
 	import MLFL_main
 	import MLFL_plots
 	import MLFL_validation
-	#import LINEAR_MODEL_FL as LMFL
+	import LINEAR_MODEL_FL as LMFL
 	import numpy as np
 	import statistics
 

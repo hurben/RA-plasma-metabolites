@@ -289,7 +289,7 @@ if __name__ == "__main__":
 else:
 	import os
 	import sys
-	#import LINEAR_MODEL_FL as LMFL
+	import LINEAR_MODEL_FL as LMFL
 	sys.path.insert(1, '../../src')
 
 	print ("Loading MLFL_main")
