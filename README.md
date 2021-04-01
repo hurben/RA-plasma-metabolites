@@ -11,7 +11,7 @@ Corresponding Author : sung.jaeyun@mayo.edu
 
 ##### 1. Differentially Abundant metabolites
 
->src/linear_model_r1/MLR_R_categorical_diff_2class_v2.r
+>src/linear_model_r1/MLR_R_categorical_diff_2class_public.r
 
 >analysis/differential_abundance_public/2class/run.sh
 
